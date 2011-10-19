@@ -15,7 +15,9 @@ class BeanstalkAppAPI
       headers: 
         "Content-Type": 'application/json'
   
-  get: (url, options) -> rest.get @baseURL+url+'.json', @defaults(options)
+  get: (url, options) -> 
+    rest.get(@baseURL+url+'.json', @defaults(options)).on 'error', errorHandler
+        
 # end class BeanstalkAppAPI
 
 parseCredString = (credString) ->
@@ -24,7 +26,10 @@ parseCredString = (credString) ->
   else
     console.error "Usage: growl-deploy username:password@subdomain"
     process.exit(1)
-    
+
+errorHandler = (data, res) ->
+  sys.puts "Beanstalk API Errors:"+_(data).map((line) -> "\n'#{line}'").join()
+  
 exports.growlDeploy =
   init: (creds) =>
     [username, password, domain] = parseCredString(creds)
@@ -34,5 +39,3 @@ exports.growlDeploy =
       .on 'success', (data, res) ->
         console.log(data)
       .on 'error', (data, res) ->
-        sys.puts "Beanstalk API Errors:"
-        _(data).each (line) -> sys.puts "'#{line}'"
