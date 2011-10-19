@@ -1,0 +1,22 @@
+{
+  "name": "growl-deploy",
+  "description": "Internal project",
+  "version": "0.0.1",
+  "author": "Daniel Leavitt <daniel@hyfn.com>",
+  "contributors": [ 
+    { "name": "Daniel Leavitt", "email": "daniel@hyfn.com" }
+  ],
+  "repository": {
+    "url": ""
+  },
+  "dependencies": {
+    "restler": ">= 0.2.1",
+    "underscore": ">= 0.0.0"
+  },
+  "devDependencies": {
+
+  },
+
+  "bin": { "growl-deploy": "./bin/growl-deploy.js" },
+  "engines": { "node":">= 0.4.0 < 0.7.0" }
+}
