@@ -1,20 +1,23 @@
 {
   "name": "growl-deploy",
-  "description": "Internal project",
+  "description": "Display Beanstalk deployments in growl",
   "version": "0.0.1",
   "author": "Daniel Leavitt <daniel@hyfn.com>",
+  "homepage": "https://github.com/dleavitt/growl-deploy",
   "contributors": [ 
     { "name": "Daniel Leavitt", "email": "daniel@hyfn.com" }
   ],
   "repository": {
-    "url": ""
+    "type": "git",
+    "url": "git://github.com/dleavitt/growl-deploy.git"
   },
   "dependencies": {
     "restler": ">= 0.2.1",
-    "underscore": ">= 0.0.0"
+    "underscore": ">= 0.0.0",
+    "moment": ">= 1.0.1"
   },
   "devDependencies": {
-
+    
   },
 
   "bin": { "growl-deploy": "./bin/growl-deploy.js" },
