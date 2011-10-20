@@ -3,6 +3,7 @@
 ### Installation Instructions
 
 1. Install [node.js](https://github.com/joyent/node)
-2. Install [npm](http://npmjs.org/)
-3. Install growl-deploy: `npm install growl-deploy`
-4. run it like this: `growl-deploy username:password@subdomain`
+-  Install [npm](http://npmjs.org/)
+-  Install growlnotify: `brew install growlnotify` (needs [homebrew](https://github.com/mxcl/homebrew))
+-  Install growl-deploy: `npm install growl-deploy`
+-  run it like this: `growl-deploy username:password@subdomain`
